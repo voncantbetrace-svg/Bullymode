@@ -35,7 +35,7 @@ const rest = new REST({ version: '10' }).setToken(process.env.TOKEN);
   try {
     console.log('🔄 Registering commands...');
     await rest.put(
-      Routes.applicationCommands('YOUR_CLIENT_ID'),
+      Routes.applicationCommands('1481692205276987472'),
       { body: commands }
     );
     console.log('✅ Commands registered');
