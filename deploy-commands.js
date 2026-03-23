@@ -28,8 +28,8 @@ const commands = [
             .setDescription('Number of times to send (1-16)')),
   
   new SlashCommandBuilder()
-    .setName('Arp')
-    .setDescription('We Sturdy')
+    .setName('arp')
+    .setDescription('we sturdy')
 ].map(cmd => cmd.toJSON());
 
 // Register commands
@@ -84,8 +84,8 @@ client.once(Events.ClientReady, () => {
 client.on(Events.InteractionCreate, async interaction => {
   if (!interaction.isChatInputCommand()) return;
 
-  if (interaction.commandName === 'Arp') {
-    await interaction.reply('We Sturdy!');
+  if (interaction.commandName === 'arp') {
+    await interaction.reply('we Sturdy!');
   }
 
   if (interaction.commandName === 'flood') {
