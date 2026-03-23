@@ -94,7 +94,7 @@ client.on(Events.InteractionCreate, async interaction => {
   }
 
   try {
-    if (interaction.commandName === 'Arp ') {
+    if (interaction.commandName === 'Arp') {
       await interaction.reply('Onna 2man Gtfo!');
     }
 
