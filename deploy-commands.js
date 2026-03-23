@@ -28,8 +28,8 @@ const commands = [
             .setDescription('Number of times to send (1-16)')),
   
   new SlashCommandBuilder()
-    .setName('ping')
-    .setDescription('Check if bot is alive')
+    .setName('Arp')
+    .setDescription('I'm sturdy')
 ].map(cmd => cmd.toJSON());
 
 // Register commands
@@ -62,10 +62,10 @@ client.once(Events.ClientReady, () => {
   console.log(`🔥 Bot is online as ${client.user.tag}`);
 
   const statuses = [
-    { name: 'Flooding the server 🌊', type: 0 },     // Playing
-    { name: 'With Bully emblem 💬', type: 2 },       // Listening
-    { name: 'Chaos incoming 😎', type: 3 },          // Watching
-    { name: 'Competitive mode ⚔️', type: 5 }        // Competing
+    { name: 'Yo Bitch Love Me', type: 0 },     // Playing
+    { name: 'Tell yo ho stop textin me', type: 2 },       // Listening
+    { name: 'Back Ina Movie', type: 3 },          // Watching
+    { name: 'Come Die', type: 5 }        // Competing
   ];
 
   let i = 0;
@@ -84,8 +84,8 @@ client.once(Events.ClientReady, () => {
 client.on(Events.InteractionCreate, async interaction => {
   if (!interaction.isChatInputCommand()) return;
 
-  if (interaction.commandName === 'ping') {
-    await interaction.reply('🏓 Pong!');
+  if (interaction.commandName === 'Arp') {
+    await interaction.reply('We Sturdy!');
   }
 
   if (interaction.commandName === 'flood') {
@@ -97,7 +97,7 @@ client.on(Events.InteractionCreate, async interaction => {
       await interaction.channel.send(message);
     }
 
-    await interaction.reply(`✅ Sent message ${count} times!`);
+    await interaction.reply(`ONG THIS SERVER ASS`);
   }
 });
 
