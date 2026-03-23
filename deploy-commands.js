@@ -29,7 +29,7 @@ const commands = [
   
   new SlashCommandBuilder()
     .setName('Arp')
-    .setDescription('Im sturdy')
+    .setDescription('We Sturdy')
 ].map(cmd => cmd.toJSON());
 
 // Register commands
