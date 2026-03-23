@@ -66,10 +66,10 @@ client.once(Events.ClientReady, () => {
   client.guilds.cache.forEach(g => console.log(g.id, g.name));
 
   const statuses = [
-    { name: 'Flooding the server 🌊', type: 0 },     // Playing
-    { name: 'With Bully emblem 💬', type: 2 },       // Listening
-    { name: 'Chaos incoming 😎', type: 3 },          // Watching
-    { name: 'Competitive mode ⚔️', type: 5 }        // Competing
+    { name: 'Bully Taking Over', type: 0 },     // Playing
+    { name: 'Textin Yo Ho', type: 2 },       // Listening
+    { name: 'You a bitch nigga', type: 3 },          // Watching
+    { name: 'Come Die', type: 5 }        // Competing
   ];
 
   let i = 0;
@@ -94,8 +94,8 @@ client.on(Events.InteractionCreate, async interaction => {
   }
 
   try {
-    if (interaction.commandName === 'ping') {
-      await interaction.reply('🏓 Pong!');
+    if (interaction.commandName === 'Arp ') {
+      await interaction.reply('Onna 2man Gtfo!');
     }
 
     if (interaction.commandName === 'flood') {
