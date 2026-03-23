@@ -8,7 +8,7 @@ const rest = new REST({ version: '10' }).setToken(TOKEN);
   try {
     // Clear commands in a single guild
     await rest.put(
-      Routes.applicationGuildCommands(CLIENT_ID, TEST_GUILD_ID),
+      Routes.applicationGuildCommands(1485448760296472767, 1483499696822550680),
       { body: [] } // deletes all commands in this guild
     );
     console.log('✅ Cleared all guild commands in server:', TEST_GUILD_ID);
