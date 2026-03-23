@@ -47,14 +47,33 @@ const rest = new REST({ version: '10' }).setToken(process.env.TOKEN);
 // ===== BOT READY =====
 client.once(Events.ClientReady, () => {
   console.log(`🔥 BullyMode is online as ${client.user.tag}`);
+
+  // ===== ROTATING STATUSES =====
+  const statuses = [
+    { name: 'BullyMode 😈', type: 0 },          // Playing
+    { name: 'With your messages 💬', type: 2 },  // Listening
+    { name: 'The server chaos 😎', type: 3 },    // Watching
+    { name: 'Competitive mode ⚔️', type: 5 }    // Competing
+  ];
+
+  let i = 0;
+  setInterval(() => {
+    const status = statuses[i];
+    client.user.setPresence({
+      activities: [status],
+      status: 'online'
+    });
+    i = (i + 1) % statuses.length; // loop back to start
+    console.log(`🎮 Status updated to: ${status.name}`);
+  }, 10000); // change every 10 seconds
 });
 
 // ===== INTERACTIONS =====
 client.on(Events.InteractionCreate, async interaction => {
   if (!interaction.isChatInputCommand()) return;
 
-  if (interaction.commandName === 'ping') {
-    await interaction.reply('🏓 Pong!');
+  if (interaction.commandName === 'Arp') {
+    await interaction.reply('Hit Yo 🧠!');
   }
 
   if (interaction.commandName === 'bullymode') {
