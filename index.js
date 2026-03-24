@@ -94,8 +94,8 @@ client.on(Events.InteractionCreate, async interaction => {
   }
 
   try {
-    if (interaction.commandName === 'Arp') {
-      await interaction.reply('Onna 2man Gtfo!');
+    if (interaction.commandName === 'arp') {
+      await interaction.reply('onna 2man gtfo!');
     }
 
     if (interaction.commandName === 'flood') {
